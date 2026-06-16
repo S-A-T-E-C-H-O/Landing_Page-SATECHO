@@ -667,7 +667,7 @@
     font-size: var(--text-headline-lg);
     font-weight: 800;
     letter-spacing: -0.02em;
-    color: var(--on-surface);
+    color: var(--primary);
   }
 
   .about-team__subtitle {
