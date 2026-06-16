@@ -39,59 +39,61 @@
 <body>
     <!-- Header and Navigation -->
     <header class="header">
-        <nav class="header__nav" aria-label="Main navigation">
-            <div class="header__brand">
-                <a href="#hero" class="header__logo" data-i18n="nav.logo">SATECHO</a>
-                <button class="header__burger" id="burgerMenu" aria-label="Toggle menu" aria-expanded="false">
-                    <span class="header__burger-line"></span>
-                    <span class="header__burger-line"></span>
-                    <span class="header__burger-line"></span>
-                </button>
-            </div>
+        <div class="header__container">
+            <a href="#hero" class="header__logo" data-i18n="nav.logo">SATECHO</a>
+            
+            <button class="header__burger" id="burgerMenu" aria-label="Toggle menu" aria-expanded="false">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
 
-            <!-- Navigation Menu -->
-            <ul class="header__menu" id="navMenu" role="menubar">
-                <li class="header__menu-item" role="none">
-                    <a href="#features" class="header__menu-link" role="menuitem" data-i18n="nav.features">Características</a>
-                </li>
-                <li class="header__menu-item" role="none">
-                    <a href="#technology" class="header__menu-link" role="menuitem" data-i18n="nav.technology">Tecnología</a>
-                </li>
-                <li class="header__menu-item" role="none">
-                    <a href="#pricing" class="header__menu-link" role="menuitem" data-i18n="nav.pricing">Planes</a>
-                </li>
-                <li class="header__menu-item" role="none">
-                    <a href="#testimonials" class="header__menu-link" role="menuitem" data-i18n="nav.testimonials">Testimonios</a>
-                </li>
-                <li class="header__menu-item" role="none">
-                    <a href="#team" class="header__menu-link" role="menuitem" data-i18n="nav.team">Equipo</a>
-                </li>
-                <li class="header__menu-item" role="none">
-                    <a href="#contact" class="header__menu-link" role="menuitem" data-i18n="nav.contact">Contacto</a>
-                </li>
-            </ul>
+            <!-- Navigation Menu and Actions Drawer -->
+            <nav class="header__nav" id="navMenu" aria-label="Main navigation">
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a href="#features" class="header__menu-link" data-i18n="nav.features">Características</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#technology" class="header__menu-link" data-i18n="nav.technology">Tecnología</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#pricing" class="header__menu-link" data-i18n="nav.pricing">Planes</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#testimonials" class="header__menu-link" data-i18n="nav.testimonials">Testimonios</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#team" class="header__menu-link" data-i18n="nav.team">Equipo</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#contact" class="header__menu-link" data-i18n="nav.contact">Contacto</a>
+                    </li>
+                </ul>
 
-            <div class="header__actions">
-                <div class="header__language">
-                    <button class="header__lang-btn" id="langToggle" aria-label="Cambiar idioma" aria-haspopup="true" aria-expanded="false">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                    </button>
-                    <div class="header__lang-menu" id="langMenu" role="menu" aria-label="Seleccionar idioma">
-                        <button class="header__lang-option" data-lang="es" role="menuitem">Español</button>
-                        <button class="header__lang-option" data-lang="en" role="menuitem">English</button>
+                <div class="header__actions">
+                    <div class="header__language">
+                        <button class="header__lang-btn" id="langToggle" aria-label="Cambiar idioma" aria-haspopup="true" aria-expanded="false">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </button>
+                        <div class="header__lang-menu" id="langMenu" role="menu" aria-label="Seleccionar idioma">
+                            <button class="header__lang-option" data-lang="es" role="menuitem">Español</button>
+                            <button class="header__lang-option" data-lang="en" role="menuitem">English</button>
+                        </div>
                     </div>
+                    <a href="#" class="header__auth-btn header__auth-btn--login" data-i18n="nav.login">Iniciar Sesión</a>
+                    <a href="#" class="header__auth-btn header__auth-btn--signup" data-i18n="nav.signup">Registrarse</a>
                 </div>
-                <a href="#" class="header__auth-btn header__auth-btn--login" data-i18n="nav.login">Iniciar Sesión</a>
-                <a href="#" class="header__auth-btn header__auth-btn--signup" data-i18n="nav.signup">Registrarse</a>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero" id="hero">
             <div class="hero__content">
                 <h1 class="hero__title" data-i18n="hero.title">Monitoreo inteligente de suelo e irrigación para agricultores</h1>
@@ -105,7 +107,26 @@
                 <img src="/public/src/images/Hero-Image.png" alt="SATECHO App en móvil" class="hero__img" loading="eager" fetchpriority="high" />
             </div>
         </section>
+
+        <!-- About the Team Section -->
+        <section class="about-team" id="about-the-team">
+            <div class="about-team__container">
+                <h2 class="about-team__title" data-i18n="about_team.title">Video sobre el equipo</h2>
+                <p class="about-team__subtitle" data-i18n="about_team.subtitle">Descubre la historia detrás de nuestro proyecto: cómo la unión de nuestras experiencias y el aprendizaje mutuo nos impulsaron a crear tecnología con impacto real.</p>
+                <div class="about-team__video-wrapper">
+                    <iframe class="about-team__video" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Experiencias y aprendizaje del equipo SATECHO" 
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="/public/src/scripts/i18n.js" defer></script>
+    <script src="/public/src/scripts/script.js" defer></script>
 </body>
 
 </html>
