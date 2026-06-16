@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Main Global Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="robots" content="all" />
+
+    <!-- Preconnects and Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <title>SATECHO</title>
+    <meta name="title" content="SATECHO" />
+    <meta name="description"
+        content="SATECHO es una startup tecnológica fundada el 4 de abril de 2026 por un equipo de ingenieros universitarios decididos a resolver un problema crítico: la vulnerabilidad de los agricultores al clima impredecible y la inseguridad de sus tierras. Nuestra misión es poner la tecnología al servicio de quienes trabajan la tierra y los profesionales que la gestionan." />
+    <link rel="stylesheet" href="/public/src/styles/style.css" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SATECHO" />
+    <meta property="og:description"
+        content="SATECHO es una startup tecnológica dedicada a empoderar a agricultores y agrónomos con herramientas inteligentes de monitoreo." />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="SATECHO" />
+    <meta property="twitter:description"
+        content="SATECHO es una startup tecnológica dedicada a empoderar a agricultores y agrónomos con herramientas inteligentes de monitoreo." />
+    <meta property="twitter:image" content="" />
+</head>
+
+<body>
+    <!-- Header and Navigation -->
+    <header class="header">
+        <nav class="header__nav" aria-label="Main navigation">
+            <div class="header__brand">
+                <a href="#hero" class="header__logo" data-i18n="nav.logo">SATECHO</a>
+                <button class="header__burger" id="burgerMenu" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                </button>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="header__menu" id="navMenu" role="menubar">
+                <li class="header__menu-item" role="none">
+                    <a href="#features" class="header__menu-link" role="menuitem" data-i18n="nav.features">Características</a>
+                </li>
+                <li class="header__menu-item" role="none">
+                    <a href="#technology" class="header__menu-link" role="menuitem" data-i18n="nav.technology">Tecnología</a>
+                </li>
+                <li class="header__menu-item" role="none">
+                    <a href="#pricing" class="header__menu-link" role="menuitem" data-i18n="nav.pricing">Planes</a>
+                </li>
+                <li class="header__menu-item" role="none">
+                    <a href="#testimonials" class="header__menu-link" role="menuitem" data-i18n="nav.testimonials">Testimonios</a>
+                </li>
+                <li class="header__menu-item" role="none">
+                    <a href="#team" class="header__menu-link" role="menuitem" data-i18n="nav.team">Equipo</a>
+                </li>
+                <li class="header__menu-item" role="none">
+                    <a href="#contact" class="header__menu-link" role="menuitem" data-i18n="nav.contact">Contacto</a>
+                </li>
+            </ul>
+
+            <div class="header__actions">
+                <div class="header__language">
+                    <button class="header__lang-btn" id="langToggle" aria-label="Cambiar idioma" aria-haspopup="true" aria-expanded="false">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </button>
+                    <div class="header__lang-menu" id="langMenu" role="menu" aria-label="Seleccionar idioma">
+                        <button class="header__lang-option" data-lang="es" role="menuitem">Español</button>
+                        <button class="header__lang-option" data-lang="en" role="menuitem">English</button>
+                    </div>
+                </div>
+                <a href="#" class="header__auth-btn header__auth-btn--login" data-i18n="nav.login">Iniciar Sesión</a>
+                <a href="#" class="header__auth-btn header__auth-btn--signup" data-i18n="nav.signup">Registrarse</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero__content">
+                <h1 class="hero__title" data-i18n="hero.title">Monitoreo inteligente de suelo e irrigación para agricultores</h1>
+                <p class="hero__subtitle" data-i18n="hero.subtitle">SATECHO es una startup de tecnología que utiliza IoT e IA para ayudarte a monitorear tus cultivos en tiempo real y tomar decisiones basadas en datos.</p>
+                <div class="hero__buttons">
+                    <button class="hero__btn hero__btn--primary" data-i18n="hero.cta_download">Descargar App</button>
+                    <button class="hero__btn hero__btn--secondary" data-i18n="hero.cta_learn">Aprender Más</button>
+                </div>
+            </div>
+            <div class="hero__image">
+                <img src="/public/src/images/Hero-Image.png" alt="SATECHO App en móvil" class="hero__img" loading="eager" fetchpriority="high" />
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
