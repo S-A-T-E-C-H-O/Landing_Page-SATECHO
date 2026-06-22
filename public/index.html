@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Main Global Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="robots" content="all" />
+
+    <!-- Preconnects and Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <title>SATECHO</title>
+    <meta name="title" content="SATECHO" />
+    <meta name="description"
+        content="SATECHO es una startup tecnológica fundada el 4 de abril de 2026 por un equipo de ingenieros universitarios decididos a resolver un problema crítico: la vulnerabilidad de los agricultores al clima impredecible y la inseguridad de sus tierras. Nuestra misión es poner la tecnología al servicio de quienes trabajan la tierra y los profesionales que la gestionan." />
+    <link rel="stylesheet" href="/public/src/styles/style.css" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SATECHO" />
+    <meta property="og:description"
+        content="SATECHO es una startup tecnológica dedicada a empoderar a agricultores y agrónomos con herramientas inteligentes de monitoreo." />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="SATECHO" />
+    <meta property="twitter:description"
+        content="SATECHO es una startup tecnológica dedicada a empoderar a agricultores y agrónomos con herramientas inteligentes de monitoreo." />
+    <meta property="twitter:image" content="" />
+</head>
+
+<body>
+    <!-- Language Loading Overlay -->
+    <div class="lang-loader" id="langLoader" aria-hidden="true">
+        <div class="lang-loader__spinner-wrapper">
+            <div class="lang-loader__logo">SATECHO</div>
+            <div class="lang-loader__spinner"></div>
+        </div>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header class="header">
+        <div class="header__container">
+            <a href="#hero" class="header__logo" data-i18n="nav.logo" aria-label="SATECHO inicio">AGROSAFE</a>
+            
+            <button class="header__burger" id="burgerMenu" aria-label="Abrir menú de navegación móvil" data-i18n-aria-label="nav.burger_aria" aria-expanded="false" aria-controls="navMenu">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
+ 
+            <!-- Navigation Menu and Actions Drawer -->
+            <nav class="header__nav" id="navMenu" aria-label="Navegación principal">
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a href="#about-us" class="header__menu-link" data-i18n="nav.about">Sobre nosotros</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#features" class="header__menu-link" data-i18n="nav.features">Características</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#testimonials" class="header__menu-link" data-i18n="nav.testimonials">Testimonios</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#pricing" class="header__menu-link" data-i18n="nav.pricing">Precios</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#contact" class="header__menu-link" data-i18n="nav.contact">Contacto</a>
+                    </li>
+                </ul>
+ 
+                <div class="header__actions">
+                    <div class="header__language">
+                        <button class="header__lang-btn" id="langToggle" data-i18n-aria-label="nav.lang_toggle_aria" aria-label="Cambiar idioma de la página" aria-haspopup="true" aria-expanded="false">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </button>
+                        <div class="header__lang-menu" id="langMenu" role="menu" aria-label="Opciones de idioma">
+                            <button class="header__lang-option" data-lang="es" role="menuitem" aria-label="Cambiar idioma a Español" data-i18n-aria-label="nav.lang_es_aria">Español</button>
+                            <button class="header__lang-option" data-lang="en" role="menuitem" aria-label="Change language to English" data-i18n-aria-label="nav.lang_en_aria">English</button>
+                        </div>
+                    </div>
+                    <a href="#" class="header__auth-btn header__auth-btn--login" data-i18n="nav.login" data-i18n-aria-label="nav.login_aria" aria-label="Iniciar sesión en la plataforma SATECHO">Iniciar Sesión</a>
+                    <a href="#" class="header__auth-btn header__auth-btn--signup" data-i18n="nav.signup" data-i18n-aria-label="nav.signup_aria" aria-label="Registrarse en la plataforma SATECHO">Registrarse</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-labelledby="heroTitle">
+            <div class="hero__content">
+                <h1 class="hero__title" id="heroTitle" data-i18n="hero.title">Monitoreo inteligente de suelo e irrigación para agricultores</h1>
+                <p class="hero__subtitle" data-i18n="hero.subtitle">SATECHO es una startup de tecnología que utiliza IoT e IA para ayudarte a monitorear tus cultivos en tiempo real y tomar decisiones basadas en datos.</p>
+                <div class="hero__buttons">
+                    <button class="hero__btn hero__btn--primary" data-i18n="hero.cta_download" data-i18n-aria-label="hero.cta_download_aria" aria-label="Descargar la aplicación móvil de SATECHO">Descargar App</button>
+                    <button class="hero__btn hero__btn--secondary" data-i18n="hero.cta_learn" data-i18n-aria-label="hero.cta_learn_aria" aria-label="Aprender más sobre SATECHO">Aprender Más</button>
+                </div>
+            </div>
+            <div class="hero__image">
+                <img src="/public/src/images/Hero-Image.png" alt="SATECHO App en móvil" class="hero__img" loading="eager" fetchpriority="high" />
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-us" id="about-us" aria-labelledby="aboutUsTitle">
+            <div class="about-us__container">
+                <h2 class="about-us__title" id="aboutUsTitle" data-i18n="about_us.title">Sobre nosotros</h2>
+                <p class="about-us__subtitle" data-i18n="about_us.subtitle">Transformamos el esfuerzo agrícola en una gestión inteligente y de precisión.</p>
+                <div class="about-us__grid">
+                    <!-- Card 1: About us -->
+                    <div class="about-us__card">
+                        <div class="about-us__icon-container">
+                            <svg class="about-us__icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="about-us__card-title" data-i18n="about_us.card1_title">Quiénes Somos</h3>
+                        <p class="about-us__card-description" data-i18n="about_us.card1_desc">Somos un equipo de ingenieros universitarios dedicados a resolver la vulnerabilidad del agricultor frente a climas impredecibles y la inseguridad de sus tierras mediante tecnología IoT accesible.</p>
+                    </div>
+
+                    <!-- Card 2: Value Proposition -->
+                    <div class="about-us__card">
+                        <div class="about-us__icon-container">
+                            <svg class="about-us__icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="about-us__card-title" data-i18n="about_us.card2_title">Propuesta de Valor</h3>
+                        <p class="about-us__card-description" data-i18n="about_us.card2_desc">Democratizamos la agricultura de precisión facilitando el monitoreo de suelo en tiempo real y la automatización del riego, permitiendo que cualquiera proteja su inversión y optimice recursos desde su móvil.</p>
+                    </div>
+
+                    <!-- Card 3: Mision & vision -->
+                    <div class="about-us__card">
+                        <div class="about-us__icon-container">
+                            <svg class="about-us__icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="about-us__card-title" data-i18n="about_us.card3_title">Misión y Visión</h3>
+                        <p class="about-us__card-description" data-i18n="about_us.card3_desc">Poner la tecnología al servicio de quienes trabajan la tierra con sistemas amigables, siendo aliados tecnológicos principales en zonas rurales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About the Team Section -->
+        <section class="about-team" id="about-the-team" aria-labelledby="aboutTeamTitle">
+            <div class="about-team__container">
+                <h2 class="about-team__title" id="aboutTeamTitle" data-i18n="about_team.title">Video sobre el producto</h2>
+                <p class="about-team__subtitle" data-i18n="about_team.subtitle">Descubre la historia detrás de nuestro proyecto: cómo la unión de nuestras experiencias y el aprendizaje mutuo nos impulsaron a crear tecnología con impacto real.</p>
+                <div class="about-team__video-wrapper">
+                    <iframe class="about-team__video" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Experiencias y aprendizaje del equipo SATECHO" 
+                            data-i18n-title="about_team.video_title"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Features Section -->
+        <section class="features" id="features" aria-labelledby="featuresTitle">
+            <div class="features__container">
+                <h2 class="features__title" id="featuresTitle" data-i18n="features.title">Características de la App</h2>
+                <p class="features__subtitle" data-i18n="features.subtitle">Monitorea, automatiza y protege tus cultivos con la plataforma agrícola inteligente de AGROSAFE.</p>
+                <div class="features__grid">
+                    <!-- Card 1: Real-Time Soil Monitoring -->
+                    <div class="features__card">
+                        <div class="features__icon-wrapper">
+                            <svg class="features__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="features__card-title" data-i18n="features.card1_title">Monitoreo de Suelo en Tiempo Real</h3>
+                        <p class="features__card-description" data-i18n="features.card1_desc">Captura datos físicos de humedad, pH, temperatura y conductividad eléctrica (CE) en tiempo real mediante nodos sensores ESP32.</p>
+                    </div>
+
+                    <!-- Card 2: Automatic Irrigation and Fertigation -->
+                    <div class="features__card">
+                        <div class="features__icon-wrapper">
+                            <svg class="features__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="features__card-title" data-i18n="features.card2_title">Riego y Fertirrigación Automática</h3>
+                        <p class="features__card-description" data-i18n="features.card2_desc">Controla electroválvulas automáticamente para dosificar el agua y nutrientes que tus cultivos necesitan, evitando desperdicios.</p>
+                    </div>
+
+                    <!-- Card 3: Perimeter Security for the Field -->
+                    <div class="features__card">
+                        <div class="features__icon-wrapper">
+                            <svg class="features__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="features__card-title" data-i18n="features.card3_title">Seguridad Perimetral del Campo</h3>
+                        <p class="features__card-description" data-i18n="features.card3_desc">Detecta y clasifica intrusos o anomalías perimetrales mediante sensores de movimiento y algoritmos de clasificación térmica.</p>
+                    </div>
+
+                    <!-- Card 4: Mobile App and Web Interface -->
+                    <div class="features__card">
+                        <div class="features__icon-wrapper">
+                            <svg class="features__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="features__card-title" data-i18n="features.card4_title">App Móvil e Interfaz Web</h3>
+                        <p class="features__card-description" data-i18n="features.card4_desc">Monitorea desde una app móvil Android/iOS intuitiva en el campo, o analiza reportes avanzados desde la plataforma web.</p>
+                    </div>
+
+                    <!-- Card 5: Decision-Making Model -->
+                    <div class="features__card">
+                        <div class="features__icon-wrapper">
+                            <svg class="features__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="features__card-title" data-i18n="features.card5_title">Modelo de Toma de Decisiones</h3>
+                        <p class="features__card-description" data-i18n="features.card5_desc">Motor lógico e Inteligencia Artificial que evalúa umbrales agronómicos y etapas fenológicas para prevenir el estrés hídrico.</p>
+                    </div>
+
+                    <!-- Card 6: Offline Mode and Synchronization -->
+                    <div class="features__card">
+                        <div class="features__icon-wrapper">
+                            <svg class="features__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                            </svg>
+                        </div>
+                        <h3 class="features__card-title" data-i18n="features.card6_title">Modo Offline y Sincronización</h3>
+                        <p class="features__card-description" data-i18n="features.card6_desc">Tolerancia completa a desconexiones: almacena tus datos localmente en zonas rurales sin señal y sincronízalos automáticamente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About the Product Section -->
+        <section class="about-product" id="about-the-product" aria-labelledby="aboutProductTitle">
+            <div class="about-product__container">
+                <h2 class="about-product__title" id="aboutProductTitle" data-i18n="about_product.title">Funcionamiento de la Solución</h2>
+                <p class="about-product__subtitle" data-i18n="about_product.subtitle">Mira nuestra tecnología IoT en acción y descubre cómo automatizamos el cuidado de tus campos en tiempo real.</p>
+                <div class="about-product__video-wrapper">
+                    <iframe class="about-product__video" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Muestra funcional del producto SATECHO" 
+                            data-i18n-title="about_product.video_title"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials" aria-labelledby="testimonialsTitle">
+            <div class="testimonials__container">
+                <h2 class="testimonials__title" id="testimonialsTitle" data-i18n="testimonials.title">Testimonios</h2>
+                <p class="testimonials__subtitle" data-i18n="testimonials.subtitle">¡Lo que dicen nuestros clientes!</p>
+                <div class="testimonials__grid">
+                    <!-- Testimonial 1: Elena Gómez -->
+                    <div class="testimonials__card">
+                        <div class="testimonials__header">
+                            <img class="testimonials__avatar" src="/public/src/images/Elena-Gomez-testimonial.png" alt="Elena Gómez" loading="lazy" />
+                            <div class="testimonials__meta">
+                                <h3 class="testimonials__name" data-i18n="testimonials.card1_name">Elena Gómez</h3>
+                                <p class="testimonials__role" data-i18n="testimonials.card1_role">Ingeniera Agrónoma / Consultora</p>
+                            </div>
+                        </div>
+                        <div class="testimonials__rating" aria-label="5 estrellas de satisfacción" data-i18n-aria-label="testimonials.rating_aria">
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <p class="testimonials__text" data-i18n="testimonials.card1_text">“Gracias a las lecturas continuas de conductividad eléctrica y pH de SATECHO, he podido optimizar la fertirrigación de mis asesorados con datos científicos reales. Las alertas de estrés hídrico llegan directo a mi teléfono, lo que me ha evitado viajes innecesarios y garantizado que cada planta reciba la hidratación precisa. Es una herramienta indispensable para cualquier agrónomo profesional en la actualidad.”</p>
+                    </div>
+
+                    <!-- Testimonial 2: Carlos Ruiz -->
+                    <div class="testimonials__card">
+                        <div class="testimonials__header">
+                            <img class="testimonials__avatar" src="/public/src/images/Carlos-Ruiz-testimonial.png" alt="Carlos Ruiz" loading="lazy" />
+                            <div class="testimonials__meta">
+                                <h3 class="testimonials__name" data-i18n="testimonials.card2_name">Carlos Ruiz</h3>
+                                <p class="testimonials__role" data-i18n="testimonials.card2_role">Agricultor / Productor de Arándanos</p>
+                            </div>
+                        </div>
+                        <div class="testimonials__rating" aria-label="5 estrellas de satisfacción" data-i18n-aria-label="testimonials.rating_aria">
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <p class="testimonials__text" data-i18n="testimonials.card2_text">“Como agricultor de arándanos, la variabilidad del clima era mi mayor dolor de cabeza y siempre temía perder mi inversión por heladas o sequías. Desde que instalé los nodos sensores de SATECHO, controlo las electroválvulas desde la app móvil y el agua se distribuye solo cuando el suelo lo requiere. La tranquilidad de saber que mis campos están vigilados y protegidos las 24 horas no tiene precio.”</p>
+                    </div>
+
+                    <!-- Testimonial 3: Marco Soto -->
+                    <div class="testimonials__card">
+                        <div class="testimonials__header">
+                            <img class="testimonials__avatar" src="/public/src/images/Marco-Soto-testimonial.png" alt="Marco Soto" loading="lazy" />
+                            <div class="testimonials__meta">
+                                <h3 class="testimonials__name" data-i18n="testimonials.card3_name">Marco Soto</h3>
+                                <p class="testimonials__role" data-i18n="testimonials.card3_role">Consultor Técnico Agrícola</p>
+                            </div>
+                        </div>
+                        <div class="testimonials__rating" aria-label="5 estrellas de satisfacción" data-i18n-aria-label="testimonials.rating_aria">
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <svg class="testimonials__star" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <p class="testimonials__text" data-i18n="testimonials.card3_text">“La seguridad de los equipos en zonas rurales es un reto crítico, pero el módulo de seguridad perimetral térmica de SATECHO nos ha brindado una protección total. No solo monitoreamos la salud hídrica de los cultivos de palta Hass, sino que también recibimos alertas automáticas ante cualquier intrusión en el fundo. La app funciona de maravilla incluso en modo offline, sincronizando todo al volver a tener señal.”</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing" aria-labelledby="pricingTitle">
+            <div class="pricing__container">
+                <h2 class="pricing__title" id="pricingTitle" data-i18n="pricing.title">Planes para cada etapa de tu crecimiento</h2>
+                <p class="pricing__subtitle" data-i18n="pricing.subtitle">Elige la solución que mejor se adapte a tus hectáreas y necesidades.</p>
+                <div class="pricing__grid">
+                    <!-- Basic Card -->
+                    <div class="pricing__card pricing-card">
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title" data-i18n="pricing.basic">Basic</h3>
+                            <div class="pricing-card__price-wrapper">
+                                <span class="pricing-card__currency">$</span>
+                                <span class="pricing-card__price">39.90</span>
+                                <span class="pricing-card__period" data-i18n="pricing.monthly">/mes</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">
+                                <svg class="pricing-card__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="pricing.basic.feat1">Hasta 2 hectáreas</span>
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg class="pricing-card__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="pricing.basic.feat2">Sensores estándar (2 nodos)</span>
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg class="pricing-card__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="pricing.basic.feat3">Reportes semanales PDF</span>
+                            </li>
+                        </ul>
+                        <button class="pricing-card__btn pricing-card__btn--outline" data-i18n="pricing.select" aria-label="Elegir plan Basic para monitoreo básico" data-i18n-aria-label="pricing.select_basic_aria">Elegir plan</button>
+                    </div>
+
+                    <!-- Pro Card (Popular) -->
+                    <div class="pricing__card pricing-card pricing-card--popular">
+                        <div class="pricing-card__badge" data-i18n="pricing.popular">MÁS POPULAR</div>
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title" data-i18n="pricing.pro">Pro</h3>
+                            <div class="pricing-card__price-wrapper">
+                                <span class="pricing-card__currency">$</span>
+                                <span class="pricing-card__price">79.99</span>
+                                <span class="pricing-card__period" data-i18n="pricing.monthly">/mes</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">
+                                <svg class="pricing-card__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="pricing.pro.feat1">Hasta 20 hectáreas</span>
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg class="pricing-card__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="pricing.pro.feat2">Automatización completa</span>
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg class="pricing-card__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="pricing.pro.feat3">Alertas SMS y Push en tiempo real</span>
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg class="pricing-card__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="pricing.pro.feat4">App Premium Multi-dispositivo</span>
+                            </li>
+                        </ul>
+                        <button class="pricing-card__btn pricing-card__btn--filled" data-i18n="pricing.select" aria-label="Elegir plan Pro para automatización completa" data-i18n-aria-label="pricing.select_pro_aria">Elegir plan</button>
+                    </div>
+
+                    <!-- Enterprise Card -->
+                    <div class="pricing__card pricing-card">
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__title" data-i18n="pricing.enterprise">Enterprise</h3>
+                            <div class="pricing-card__price-wrapper">
+                                <span class="pricing-card__currency">$</span>
+                                <span class="pricing-card__price">199.99</span>
+                                <span class="pricing-card__period" data-i18n="pricing.monthly">/mes</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">
+                                <svg class="pricing-card__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="pricing.enterprise.feat1">Hectáreas ilimitadas</span>
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg class="pricing-card__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="pricing.enterprise.feat2">API de integración personalizada</span>
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg class="pricing-card__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="pricing.enterprise.feat3">Soporte 24/7 con técnico asignado</span>
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg class="pricing-card__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-i18n="pricing.enterprise.feat4">Capacitación in-situ para equipos</span>
+                            </li>
+                        </ul>
+                        <button class="pricing-card__btn pricing-card__btn--outline" data-i18n="pricing.select" aria-label="Elegir plan Enterprise para soluciones ilimitadas a gran escala" data-i18n-aria-label="pricing.select_enterprise_aria">Elegir plan</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloads Section -->
+        <section class="download" id="download" aria-labelledby="downloadTitle">
+            <div class="download__container">
+                <!-- Phone Column (Left) -->
+                <div class="download__visual">
+                    <div class="download__phone-mockup">
+                        <div class="download__phone-notch"></div>
+                        <div class="download__phone-screen"></div>
+                    </div>
+                </div>
+                
+                <!-- Content Column (Right) -->
+                <div class="download__content">
+                    <span class="download__tag" data-i18n="hero.cta_download">Descargar App</span>
+                    <h2 class="download__title" id="downloadTitle" data-i18n="download.title">Descarga la App AGROSAFE</h2>
+                    <p class="download__subtitle" data-i18n="download.subtitle">Disponible en iOS y Android</p>
+                    <p class="download__description" data-i18n="download.desc">Monitorea la humedad de tus cultivos, controla tus electroválvulas y recibe alertas críticas de IoT en tiempo real directamente en tu dispositivo móvil, sin importar dónde te encuentres.</p>
+                    
+                    <div class="download__actions">
+                        <!-- Play Store Button -->
+                        <a href="#" class="download__btn download__btn--google" aria-label="Descargar app de SATECHO desde Play Store" data-i18n-aria-label="download.play_store_aria">
+                            <svg class="download__btn-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                                <path d="M5,3.23C5.18,3.05 5.5,3 5.89,3C6.03,3 6.19,3.03 6.36,3.09L16.27,8.74L18.78,11.25L6.36,23.68C6.18,23.75 6,23.79 5.83,23.79C5.46,23.79 5.17,23.73 5,23.57V3.23M22.8,11.72C23.07,11.87 23.2,12.09 23.2,12.37C23.2,12.65 23.07,12.87 22.8,13.03L19.46,14.93L16.95,12.42L19.46,9.91L22.8,11.72M6.36,3.09C6.88,3.27 15.35,8.12 16.95,9.04L14.44,11.55L6.36,3.09M6.36,23.68L14.44,13.2L16.95,15.71L6.36,23.68Z" />
+                            </svg>
+                            <span class="download__btn-text" data-i18n="download.play_store">Disponible en Play Store</span>
+                        </a>
+
+                        <!-- App Store Button -->
+                        <a href="#" class="download__btn download__btn--apple" aria-label="Descargar app de SATECHO desde App Store" data-i18n-aria-label="download.app_store_aria">
+                            <svg class="download__btn-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                                <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,22C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.1,16.67C20.08,16.74 19.67,18.11 18.71,19.5M15.97,4.17C16.63,3.37 17.07,2.28 16.95,1C16,1.04 14.9,1.6 14.24,2.38C13.68,3.04 13.19,4.14 13.34,5.39C14.39,5.47 15.4,4.88 15.97,4.17Z" />
+                            </svg>
+                            <span class="download__btn-text" data-i18n="download.app_store">Disponible en App Store</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact" aria-labelledby="contactTitle">
+            <div class="contact__container">
+                <div class="contact__header">
+                    <h2 class="contact__title" id="contactTitle" data-i18n="contact.title">Únete a la revolución agrícola</h2>
+                    <p class="contact__subtitle" data-i18n="contact.subtitle">¡Ponte en contacto con nosotros!</p>
+                </div>
+                
+                <form id="contactForm" class="contact-form" novalidate>
+                    <!-- Name input group -->
+                    <div class="contact-form__group">
+                        <label for="contactName" class="contact-form__label" data-i18n="contact.name_label">Nombre completo (obligatorio)</label>
+                        <input type="text" id="contactName" name="name" class="contact-form__input" required aria-required="true" minlength="3" maxlength="50" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" data-i18n-placeholder="contact.name_placeholder" placeholder="Escribe tu nombre completo">
+                    </div>
+                    
+                    <!-- Email input group -->
+                    <div class="contact-form__group">
+                        <label for="contactEmail" class="contact-form__label" data-i18n="contact.email_label">Email (obligatorio)</label>
+                        <input type="email" id="contactEmail" name="email" class="contact-form__input" required aria-required="true" maxlength="100" data-i18n-placeholder="contact.email_placeholder" placeholder="correo@ejemplo.com">
+                    </div>
+                    
+                    <!-- Phone input group -->
+                    <div class="contact-form__group">
+                        <label for="contactPhone" class="contact-form__label" data-i18n="contact.phone_label">Teléfono (opcional)</label>
+                        <input type="tel" id="contactPhone" name="phone" class="contact-form__input" minlength="7" maxlength="15" pattern="^[+]*[0-9-\s]+$" data-i18n-placeholder="contact.phone_placeholder" placeholder="+51 987 654 321">
+                    </div>
+                    
+                    <!-- Checkbox privacy / terms -->
+                    <div class="contact-form__checkbox-wrapper">
+                        <input type="checkbox" id="contactAccept" name="accept" class="contact-form__checkbox" required aria-required="true">
+                        <label for="contactAccept" class="contact-form__checkbox-label">
+                            <span data-i18n="contact.checkbox_prefix">He leído y acepto los </span>
+                            <a href="/public/terms.html" target="_blank" class="contact-form__link" data-i18n="contact.terms_link">términos de servicio</a>
+                            <span data-i18n="contact.checkbox_and"> y las </span>
+                            <a href="/public/privacy.html" target="_blank" class="contact-form__link" data-i18n="contact.privacy_link">políticas de privacidad</a>
+                        </label>
+                    </div>
+                    
+                    <!-- Submit button -->
+                    <button type="submit" class="contact-form__submit-btn" data-i18n="contact.submit" aria-label="Enviar mensaje de contacto" data-i18n-aria-label="contact.submit_aria">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer" aria-label="Pie de página de SATECHO" data-i18n-aria-label="footer.aria_label">
+            <div class="footer__container">
+                <!-- Branding/Info Column -->
+                <div class="footer__info">
+                    <a href="/public/index.html" class="footer__logo">SATECHO</a>
+                    <p class="footer__description" data-i18n="footer.description">SATECHO es una startup tecnológica dedicada a empoderar a agricultores y agrónomos con herramientas inteligentes.</p>
+                </div>
+                
+                <!-- Grid Links Columns -->
+                <div class="footer__grid">
+                    <!-- Column 1: Producto -->
+                    <div class="footer__col">
+                        <h3 class="footer__col-title" data-i18n="footer.product">Producto</h3>
+                        <ul class="footer__links">
+                            <li><a href="#about-us" class="footer__link" data-i18n="footer.about">Sobre nosotros</a></li>
+                            <li><a href="#features" class="footer__link" data-i18n="footer.features">Características</a></li>
+                            <li><a href="#testimonials" class="footer__link" data-i18n="footer.testimonials">Testimonios</a></li>
+                            <li><a href="#pricing" class="footer__link" data-i18n="footer.pricing">Precios</a></li>
+                            <li><a href="#contact" class="footer__link" data-i18n="footer.contact">Contactos</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 2: Legal -->
+                    <div class="footer__col">
+                        <h3 class="footer__col-title" data-i18n="footer.legal">Legal</h3>
+                        <ul class="footer__links">
+                            <li><a href="/public/privacy.html" target="_blank" class="footer__link" data-i18n="footer.privacy">Política de Privacidad</a></li>
+                            <li><a href="/public/terms.html" target="_blank" class="footer__link" data-i18n="footer.terms">Términos de Servicio</a></li>
+                            <li><a href="#" class="footer__link" data-i18n="footer.support">Soporte</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 3: Contacto -->
+                    <div class="footer__col">
+                        <h3 class="footer__col-title" data-i18n="footer.contact">Contacto</h3>
+                        <ul class="footer__contact-info">
+                            <li class="footer__contact-item">
+                                <svg class="footer__contact-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <a href="mailto:contacto@satecho.com" class="footer__contact-link" aria-label="Enviar correo a contacto@satecho.com" data-i18n-aria-label="footer.email_aria">contacto@satecho.com</a>
+                            </li>
+                            <li class="footer__contact-item">
+                                <svg class="footer__contact-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <a href="tel:+51987654321" class="footer__contact-link" aria-label="Llamar al teléfono +51987654321" data-i18n-aria-label="footer.phone_aria">+51 987 654 321</a>
+                            </li>
+                            <li class="footer__contact-item">
+                                <svg class="footer__contact-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span class="footer__contact-text" data-i18n="footer.address_val" aria-label="Dirección de la oficina: Av. Universitaria 1801, Lima, Perú" data-i18n-aria-label="footer.address_aria">Av. Universitaria 1801, Lima, Perú</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright" data-i18n="footer.copyright">© 2026 SATECHO. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </main>
+    <script src="/public/src/scripts/i18n.js" defer></script>
+    <script src="/public/src/scripts/script.js" defer></script>
+</body>
+
+</html>

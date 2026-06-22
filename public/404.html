@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Main Global Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="robots" content="noindex, follow" />
+
+    <!-- Preconnects and Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <title data-i18n="404.title">404 - Página no encontrada | SATECHO</title>
+    <meta name="title" content="404 - Página no encontrada | SATECHO" />
+    <meta name="description" content="La página que estás buscando no existe. Regresa al inicio de SATECHO." />
+    
+    <link rel="stylesheet" href="/public/src/styles/style.css" />
+</head>
+
+<body class="error-page">
+    <!-- Language Loading Overlay -->
+    <div class="lang-loader" id="langLoader" aria-hidden="true">
+        <div class="lang-loader__spinner-wrapper">
+            <div class="lang-loader__logo">SATECHO</div>
+            <div class="lang-loader__spinner"></div>
+        </div>
+    </div>
+
+    <!-- Minimal Header with Logo and Language Selector -->
+    <header class="header">
+        <div class="header__container">
+            <a href="/public/index.html" class="header__logo" data-i18n="nav.logo" aria-label="SATECHO inicio">AGROSAFE</a>
+            
+            <div class="header__actions">
+                <div class="header__language">
+                    <button class="header__lang-btn" id="langToggle" data-i18n-aria-label="nav.lang_toggle_aria" aria-label="Cambiar idioma de la página" aria-haspopup="true" aria-expanded="false">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </button>
+                    <div class="header__lang-menu" id="langMenu" role="menu" aria-label="Opciones de idioma">
+                        <button class="header__lang-option" data-lang="es" role="menuitem" aria-label="Cambiar idioma a Español" data-i18n-aria-label="nav.lang_es_aria">Español</button>
+                        <button class="header__lang-option" data-lang="en" role="menuitem" aria-label="Change language to English" data-i18n-aria-label="nav.lang_en_aria">English</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="error-page__main">
+        <div class="error-container">
+            <!-- 404 Badge -->
+            <div class="error-badge">Error 404</div>
+
+            <!-- Premium Animated SVG Illustration -->
+            <div class="error-illustration">
+                <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="errorSvgTitle errorSvgDesc">
+                    <title id="errorSvgTitle">Ilustración de página no encontrada</title>
+                    <desc id="errorSvgDesc">Un escáner de suelo de SATECHO buscando sobre un terreno sin encontrar datos, con una planta marchita a su lado.</desc>
+                    
+                    <!-- Background Grid / Radar Scan -->
+                    <g opacity="0.15">
+                        <circle cx="200" cy="150" r="120" stroke="var(--primary)" stroke-width="1" stroke-dasharray="4 4" />
+                        <circle cx="200" cy="150" r="80" stroke="var(--primary)" stroke-width="1" stroke-dasharray="4 4" />
+                        <circle cx="200" cy="150" r="40" stroke="var(--primary)" stroke-width="1" stroke-dasharray="4 4" />
+                        <line x1="200" y1="30" x2="200" y2="270" stroke="var(--primary)" stroke-width="1" stroke-dasharray="2 2" />
+                        <line x1="80" y1="150" x2="320" y2="150" stroke="var(--primary)" stroke-width="1" stroke-dasharray="2 2" />
+                    </g>
+
+                    <!-- Dry / Cracked Ground -->
+                    <g transform="translate(0, 30)">
+                        <!-- Ground Line Base -->
+                        <path d="M 50 200 Q 200 190 350 200" stroke="var(--outline-variant)" stroke-width="4" stroke-linecap="round" />
+                        <!-- Cracks in Ground -->
+                        <path d="M 170 196 L 165 210 L 172 220" stroke="var(--outline-variant)" stroke-width="2" stroke-linecap="round" />
+                        <path d="M 165 210 L 152 215" stroke="var(--outline-variant)" stroke-width="2" stroke-linecap="round" />
+                        <path d="M 230 197 L 235 208 L 228 222" stroke="var(--outline-variant)" stroke-width="2" stroke-linecap="round" />
+                        <path d="M 235 208 L 248 212" stroke="var(--outline-variant)" stroke-width="2" stroke-linecap="round" />
+                        
+                        <!-- Ground Texture Dots -->
+                        <circle cx="100" cy="210" r="2" fill="var(--outline-variant)" />
+                        <circle cx="120" cy="205" r="1.5" fill="var(--outline-variant)" />
+                        <circle cx="280" cy="210" r="2" fill="var(--outline-variant)" />
+                        <circle cx="300" cy="205" r="1.5" fill="var(--outline-variant)" />
+                    </g>
+
+                    <!-- Wilted Plant -->
+                    <g class="animated-plant" transform="translate(130, 150)">
+                        <!-- Stem -->
+                        <path d="M 20 80 Q 15 50 5 40" stroke="var(--tertiary)" stroke-width="3" fill="none" stroke-linecap="round" />
+                        <!-- Wilted Drooping Leaves -->
+                        <path class="animated-leaf" d="M 15 65 C 5 65 -5 75 -2 80 C 5 80 15 75 18 70 Z" fill="var(--tertiary-container)" stroke="var(--tertiary)" stroke-width="1.5" />
+                        <path class="animated-leaf" d="M 12 52 C 20 52 28 65 25 70 C 20 70 12 60 10 55 Z" fill="var(--tertiary-container)" stroke="var(--tertiary)" stroke-width="1.5" fill-opacity="0.8" />
+                        <!-- Small Bud -->
+                        <circle cx="5" cy="40" r="4" fill="var(--tertiary)" />
+                    </g>
+
+                    <!-- IoT Scanning Device / Magnifying Glass -->
+                    <g class="animated-lens" transform="translate(190, 80)">
+                        <!-- Scanning Cone -->
+                        <path d="M 50 50 L 10 130 A 60 15 0 0 0 90 130 Z" fill="var(--primary)" opacity="0.12" />
+                        
+                        <!-- Scanning Signal Waves -->
+                        <circle class="animated-signal" cx="50" cy="130" r="15" stroke="var(--primary)" stroke-width="1.5" fill="none" opacity="0.6" />
+                        <circle class="animated-signal" cx="50" cy="130" r="28" stroke="var(--primary)" stroke-width="1" stroke-dasharray="2 2" fill="none" opacity="0.4" />
+                        
+                        <!-- Magnifying Glass Handle -->
+                        <rect x="73" y="73" width="8" height="35" rx="4" transform="rotate(-45 73 73)" fill="var(--tertiary)" stroke="var(--tertiary-container)" stroke-width="1.5" />
+                        <!-- Magnifying Glass Frame -->
+                        <circle cx="50" cy="50" r="30" stroke="var(--primary)" stroke-width="4" fill="var(--surface-container-lowest)" />
+                        <!-- Lens Inner Ring -->
+                        <circle cx="50" cy="50" r="27" stroke="var(--primary-container)" stroke-width="1.5" fill="none" />
+                        <!-- Lens Shine -->
+                        <path d="M 32 40 A 22 22 0 0 1 60 28" stroke="var(--on-primary)" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+                        
+                        <!-- Question Mark on screen -->
+                        <text x="50" y="58" font-family="Manrope, sans-serif" font-weight="800" font-size="24" fill="var(--primary)" text-anchor="middle">?</text>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Error Info -->
+            <h1 class="error-heading" data-i18n="404.heading">Página no encontrada</h1>
+            <p class="error-desc" data-i18n="404.desc">Lo sentimos, la página que estás buscando no existe, ha sido movida o no está disponible en este momento.</p>
+            
+            <!-- Back Home Link -->
+            <div class="error-cta">
+                <a href="/public/index.html" class="error-btn" data-i18n="404.cta">Volver al inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- i18n and Script Module Loaders -->
+    <script src="/public/src/scripts/i18n.js" defer></script>
+    <script src="/public/src/scripts/script.js" defer></script>
+</body>
+
+</html>
