@@ -1,0 +1,27 @@
+{
+  "name": "landing_page-satecho",
+  "version": "1.0.0",
+  "description": "SATECHO landing page created using HTML5, CSS, and JavaScript to capture the attention of users interested in our solution who could become potential customers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S-A-T-E-C-H-O/Landing_Page-SATECHO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/S-A-T-E-C-H-O/Landing_Page-SATECHO/issues"
+  },
+  "homepage": "https://github.com/S-A-T-E-C-H-O/Landing_Page-SATECHO#readme",
+  "devDependencies": {
+    "eslint": "^9.39.4",
+    "htmlhint": "^1.9.2",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^39.0.1"
+  }
+}
