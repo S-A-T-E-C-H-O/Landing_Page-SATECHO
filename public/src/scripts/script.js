@@ -241,18 +241,6 @@
     });
   }
 
-  function initAuthButtons() {
-    document.querySelectorAll('.header__auth-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const currentLang = getCurrentLang();
-        const message = currentLang === 'es'
-          ? 'Esta función estará disponible pronto.'
-          : 'This feature will be available soon.';
-        alert(message);
-      });
-    });
-  }
 
   function initHeroButtons() {
     document.querySelectorAll('.hero__btn').forEach(btn => {
@@ -275,7 +263,6 @@
     initContactForm();
     initPricingButtons();
     initDownloadButtons();
-    initAuthButtons();
     initHeroButtons();
   }
 
